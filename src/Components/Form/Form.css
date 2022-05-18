@@ -1,0 +1,72 @@
+form{
+    position: absolute;
+    top: 25%;
+    padding: 4vmin;
+    padding-bottom: 6vmin;
+    height: 45vmin;
+    width: 35vmin;
+    border-radius: 2vmin;
+    background: white;
+    box-shadow: rgb(216, 216, 216) 1px 1px 3px;
+    font-size: 2.5vmin;
+    font-weight: 500;
+}
+
+input{
+    font-size: 2vmin;
+    margin-bottom: 2vmin;
+    width: 96%;
+    font-family: inherit;
+}
+
+#close{
+    width: 100%;
+    position: relative;
+    top: -5vmin;
+    left: 35vmin;
+    font-size: 6vmin;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#inputs{
+    position: relative;
+    top: -3vmin;
+}
+
+#submitButton{
+width: 100%;
+background: rgb(255, 247, 95);
+cursor: pointer;
+border: none;
+border-radius: 1.5vmin;
+padding: 1vmin;
+font-weight: 600;
+font-size: 2vmin;
+}
+
+#submitButton:hover{
+    background: rgb(255, 248, 121);
+    font-weight: 700;
+}
+
+textarea{
+    resize: none;
+    width: 97%;
+    font-family: inherit;
+}
+
+#checkbox{
+    position: relative;
+    top: 1.2vmin;
+    left: 2vmin;
+    width: 4vmin;
+    height: 4vmin;
+}
+
+#book{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}

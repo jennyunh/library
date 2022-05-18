@@ -1,0 +1,29 @@
+#cardArea{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70vmin;
+}
+
+
+#cards{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        background: rgb(247, 247, 247);
+}
+
+#addBook{
+    font-size: 4vmin;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 2vmin;
+    margin-top: 5vmin;
+}
+
+#addBook:hover{
+    background: rgb(212, 212, 212);
+    border-radius: 1vmin;
+}

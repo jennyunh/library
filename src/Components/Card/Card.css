@@ -1,0 +1,8 @@
+#card{
+    width: 35vmin;
+    margin: 5vmin;
+    height: 35vmin;
+    background: white;
+    box-shadow: gray 1px 1px 4px;
+    border-radius: 1vmin;
+}
