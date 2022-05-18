@@ -61,7 +61,7 @@ const clear = () => {
   return (
     <div className="App">
       <div id="titleSection">
-      <h1 id="title">Virtual Library</h1>
+      <h1 id="title">Virtual Book List</h1>
       <h1 id="clear" onMouseLeave={displayClear} onMouseEnter={displayClear} onClick={clear}>
         <VscDebugRestart/>
         {(clearDisplay) && (<span id="saveDisplay">Clear List</span>)}
