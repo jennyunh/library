@@ -2,6 +2,8 @@ import CardArea from './Components/CardArea/CardArea.js';
 import './App.css';
 import {useState} from 'react';
 import { IoMdSave } from "react-icons/io";
+import { VscDebugRestart } from "react-icons/vsc";
+
 
 /* initialize the library with LOCAL STORAGE if it exists. Otherwise, blank array*/
 let isLocal = window.localStorage["library"];
@@ -24,8 +26,10 @@ let initial = setlibrary();
 function App() {
 
   
+const [saveDisplay, setSaveDisplay] = useState(false);
+const [clearDisplay, setClearDisplay] = useState(false);
+
 const [library, setLibrary] = useState(initial);
-console.log(library)
 
   const saveData = (data) => {
 setLibrary(data);
@@ -39,14 +43,34 @@ setLibrary(data);
   }
   }
 
+const displaySave = () => {
+setSaveDisplay(!saveDisplay)
+}
 
+const displayClear = () => {
+  setClearDisplay(!clearDisplay)
+  }
+
+const clear = () => {
+  localStorage.clear();
+  setLibrary([]);
+  console.log(window.localStorage);
+}
 
 
   return (
     <div className="App">
       <div id="titleSection">
       <h1 id="title">Virtual Library</h1>
-<h1 id="save" onClick={saveHandler}><IoMdSave/></h1>
+      <h1 id="clear" onMouseLeave={displayClear} onMouseEnter={displayClear} onClick={clear}>
+        <VscDebugRestart/>
+        {(clearDisplay) && (<span id="saveDisplay">Clear List</span>)}
+  
+        </h1>
+<h1 id="save" onClick={saveHandler} onMouseLeave={displaySave} onMouseEnter={displaySave}>
+  <IoMdSave/>
+  {(saveDisplay) && (<span id="saveDisplay">Save to Local Storage</span>)}
+  </h1>
       </div>
       <CardArea library={library} saveData={saveData}/>
 
